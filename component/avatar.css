@@ -1,0 +1,107 @@
+#btn--yp {
+  box-sizing: content-box;
+  position: fixed;
+  z-index: 9;
+  bottom: 1em;
+  right: 1em;
+  border: solid 1em transparent;
+  width: 4.625em;
+  height: 3.25em;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/icon-yp.svg) 50%/cover content-box;
+  font: 16px/ 1.25 trebuchet ms, sans-serif;
+  text-indent: 200vw;
+  text-shadow: none;
+  filter: grayscale(1) drop-shadow(0 0 1px #e8e0e0);
+  transition: .5s;
+  white-space: nowrap;
+}
+#btn--yp:before {
+  box-sizing: inherit;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  margin: 1em -.5em;
+  padding: .5em;
+  width: 100%;
+  border-radius: 5px;
+  background: #e8e0e0;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0vw;
+  white-space: normal;
+  animation: float 1s ease-in-out infinite alternate;
+  content: attr(data-txt);
+}
+#btn--yp:hover, #btn--yp:focus {
+  outline: none;
+  filter: grayscale(0) drop-shadow(0 0 1px crimson);
+}
+
+@keyframes float {
+  to {
+    transform: translateY(0.75em);
+  }
+}
+body {
+  display: grid;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  background: repeating-linear-gradient(45deg, #262626 0 2.82843px, #313131 0 7.07107px);
+  filter: drop-shadow(4px 4px 13px rgba(0, 0, 0, 0.65));
+}
+
+img {
+  place-self: center;
+  width: Min(20em, 90vw);
+  border: solid 1.25em transparent;
+  padding: 0.75em;
+  border-radius: 50%;
+  background: radial-Gradient(circle at calc(50% + (50% - 0.625em)*1) calc(50% + (50% - 0.625em)*0), #f03355 calc(0.625em - 1px), transparent 0.625em), radial-Gradient(circle at calc(50% + (50% - 0.625em)*0) calc(50% + (50% - 0.625em)*1), #514b82 calc(0.625em - 1px), transparent 0.625em), radial-Gradient(circle at calc(50% + (50% - 0.625em)*-1) calc(50% + (50% - 0.625em)*0), #ffa516 calc(0.625em - 1px), transparent 0.625em), radial-Gradient(circle at calc(50% + (50% - 0.625em)*0) calc(50% + (50% - 0.625em)*-1), #25b09b calc(0.625em - 1px), transparent 0.625em), conic-Gradient(#f03355 0% 90deg, #514b82 0% 180deg, #ffa516 0% 270deg, #25b09b 0% 360deg);
+  background-origin: border-box;
+  --mask: radial-Gradient(closest-side, red calc(100% - 1.25em - 0.75em - 1px), transparent calc(100% - 1.25em - 0.75em) calc(100% - 1.25em), red calc(100% - 1.25em + 1px) calc(100% - 1px), transparent);
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+#btn--yp {
+	box-sizing: content-box;
+	position: fixed;
+	z-index: 9;
+	bottom: 1em; right: 1em;
+	border: solid 1em transparent;
+	width: 4.625em; height: 3.25em;
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/icon-yp.svg) 50%/ cover content-box;
+	font: 16px/ 1.25 trebuchet ms, sans-serif;
+	text-indent: 200vw;
+	text-shadow: none;
+	filter: grayscale(1) drop-shadow(0 0 1px #e8e0e0);
+	transition: .5s;
+	white-space: nowrap;
+
+	&:before {
+		box-sizing: inherit;
+		position: absolute;
+		left: 0; bottom: 100%;
+		margin: 1em -.5em;
+		padding: .5em;
+		width: 100%;
+		border-radius: 5px;
+		background: #e8e0e0;
+		color: #000;
+		text-align: center;
+		text-decoration: none;
+		text-indent: 0vw;
+		white-space: normal;
+		animation: float 1s ease-in-out infinite alternate;
+		content: attr(data-txt)
+	}
+
+	&:hover, &:focus {
+		outline: none;
+		filter: grayscale(0) drop-shadow(0 0 1px crimson);
+	}
+}
+
+@keyframes float { to { transform: translateY(.75em) } }
